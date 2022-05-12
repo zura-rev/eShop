@@ -1,3 +1,4 @@
+using Discount.API.Extensions;
 using Discount.API.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +12,8 @@ builder.Services.AddControllers();
 
 var app = builder.Build();
 
+
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -22,6 +25,8 @@ app.UseCors();
 app.UseRouting();
 app.UseAuthorization();
 app.UseEndpoints(endpoints => endpoints.MapControllers());
+
+app.MigrateDatabase<Program>();
 
 app.Run();
 

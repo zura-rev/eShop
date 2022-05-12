@@ -57,7 +57,7 @@ services:
     depends_on:
       - catalogdb
     ports:
-      - "7002:80"
+      - "7000:80"
 
   basket.api:
     container_name: eshop_basket.api
@@ -77,5 +77,5 @@ services:
     depends_on:
       - discountdb
     ports:
-      - "7003:80"
+      - "7002:80"
 

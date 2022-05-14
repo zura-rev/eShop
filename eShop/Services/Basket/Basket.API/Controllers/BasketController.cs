@@ -36,7 +36,7 @@ namespace Basket.API.Controllers
             }
             catch (Exception ex)
             {
-                throw;
+                throw ex.InnerException;
             }
       
         }
